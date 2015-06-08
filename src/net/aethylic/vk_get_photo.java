@@ -35,26 +35,29 @@ public class vk_get_photo {
     //private String USER_ID;
     private URIBuilder uriBuilder = new URIBuilder();
 
-    public VKGetFriends() {
-        uriBuilder.setScheme("https").setHost("api.vk.com").setPath("/method/friends.get")
+    public vk_get_photo() {
+        uriBuilder.setScheme("https").setHost("api.vk.com").setPath("/method/photos.search")
                 //.setParameter("user_id", USER_ID)
                 /*.setParameter("order", "name")
                 .setParameter("count", "1000")
                 .setParameter("offset", "0")
                 .setParameter("fields", "photo_50,photo_max_orig")*/
-                .setParameter("namecase", "ins")
-                .setParameter("v", "5.27")
-                        //.setParameter("domain", GROUP_DOMAIN)
-                        //.setParameter("owner_id", OWNER_ID)
-                .setParameter("access_token", ACCESS_TOKEN);
+                .setParameter("lat", "30")
+                .setParameter("long", "30")
+                //.setParameter("radius", "5000")
+                .setParameter("count", "1000")
+                .setParameter("offset", "0");
+                //.setParameter("start_time", "0")
+                //.setParameter("end_time", "0")
+                //.setParameter("access_token", ACCESS_TOKEN);
 
 
     }
 
-    public JSONArray get(Long uid) {
+    public JSONArray get(Integer radius) {
         //this.USER_ID = uid.toString();
         JSONArray items=null;
-        this.uriBuilder.setParameter("user_id", uid.toString());
+        this.uriBuilder.setParameter("radius", radius.toString());
         HttpResponse response = HttpConnectionAgent.connectResponse(uriBuilder);
         Integer status = response.getStatusLine().getStatusCode();
 
@@ -94,8 +97,4 @@ public class vk_get_photo {
 }
 
 
-
-public class VKGetFriends {
-
-}
 

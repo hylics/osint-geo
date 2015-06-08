@@ -2,9 +2,9 @@
   <library name="com.googlecode.json-simple:json-simple:1.1.1" type="repository">
     <properties maven-id="com.googlecode.json-simple:json-simple:1.1.1" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/json-simple-1.1.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/junit-4.10.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
